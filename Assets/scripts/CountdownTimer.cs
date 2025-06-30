@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -28,10 +29,13 @@ public class CountdownTimer : MonoBehaviour
             {
                 timerFinished = true;
                 timerText.text = "00:00";
-                if (dialogManager != null)
+                /*if (dialogManager != null)
                 {
                     dialogManager.StartDialog();
-                }
+                }*/
+                //change scene
+                SceneManager.LoadScene("interrogationSzene");
+
             }
         }
     }
