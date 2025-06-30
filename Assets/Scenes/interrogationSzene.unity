@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691898969}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cad365bab120d84587bb35005c4a27a, type: 3}
   m_Name: 
@@ -2946,8 +2946,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cad365bab120d84587bb35005c4a27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: I just moved here and she was my neighbor. She invited me over for a cup
-    of tea. Oh God what the hell happend here. I think I fell asleep
+  message: The police offizer seems pretty calm. I shoudl try not to shit my pants
+    in fear while I am lying my way out of here.
 --- !u!65 &2009932441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2965,7 +2965,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.6254728, y: 2.08213, z: 0.29126474}
   m_Center: {x: 0.01926887, y: 1.0286179, z: 0.034859616}
@@ -3103,7 +3103,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050645946}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cad365bab120d84587bb35005c4a27a, type: 3}
   m_Name: 
