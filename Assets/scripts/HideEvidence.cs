@@ -8,6 +8,7 @@ public class HideEvidence : MonoBehaviour
     public Transform holdParent;
     public float holdSmoothness = 10f;
     public float interactionRange = 1.5f;
+    public GameObject Messer;
 
 
     [Header("UI")]
@@ -19,15 +20,28 @@ public class HideEvidence : MonoBehaviour
     public bool corpseLaunched = false;
 
 
-    private GameObject heldObject = null;
+    public GameObject heldObject = null;
     private Rigidbody heldRB = null;
-
+    public bool KnifeOnShoe;
 
     private GameObject potentialTarget = null;
     private bool isBalloon = false;
     private bool canActivate = false;
 
-
+    public bool wasKnife;
+    public bool isShoe;
+    public static HideEvidence Instance { get; set; }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -109,7 +123,7 @@ public class HideEvidence : MonoBehaviour
 
     void DropObject()
     {
-        bool wasKnife = heldObject.name.ToLower().Contains("messer") || heldObject.name.ToLower().Contains("knife");
+         wasKnife = heldObject.name.ToLower().Contains("messer") || heldObject.name.ToLower().Contains("knife");
         Vector3 dropPosition = heldObject.transform.position;
 
 
@@ -122,9 +136,10 @@ public class HideEvidence : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(dropPosition, 0.3f);
         foreach (var col in colliders)
         {
-            if (col.CompareTag("Evidence") && col.gameObject != heldObject)
-            {
-                bool isShoe = col.gameObject.name.ToLower().Contains("schuh") || col.gameObject.name.ToLower().Contains("shoe");
+           if (col.CompareTag("Evidence") && col.gameObject != heldObject)
+                
+                {
+               isShoe = col.gameObject.name.ToLower().Contains("schuh") || col.gameObject.name.ToLower().Contains("shoe");
 
 
                 if (wasKnife && isShoe)
@@ -145,6 +160,11 @@ public class HideEvidence : MonoBehaviour
 
         if (interactionHintUI != null)
             interactionHintUI.SetActive(false);
+        if (KnifeOnShoe == true)
+        {
+            Messer.gameObject.SetActive(false);
+            PlayerState.Instance.Messer = true;
+        }
     }
 
 
