@@ -104,8 +104,7 @@ public class HideEvidence : MonoBehaviour
 
                 heldRB.useGravity = false;
                 heldRB.linearDamping = 10;
-                heldRB.constraints = RigidbodyConstraints.FreezeRotation;
-
+                // heldRB.constraints = RigidbodyConstraints.FreezeRotation;
 
                 isBalloon = target.name.ToLower().Contains("ballon") || target.name.ToLower().Contains("balloon");
             }
