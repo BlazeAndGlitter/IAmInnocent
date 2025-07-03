@@ -1994,9 +1994,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d2279cceb5a6a41b6c69f4102814ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introText: {fileID: 0}
-  messages: []
-  typingSpeed: 0.05
+  introText: {fileID: 915428991}
+  messages:
+  - Ah damn it! Not again. Why do I keep waking up in god damn CRIME SZENES?
+  - They are gonna think I am a murderer. Gotta hide this stuff and put it into someone
+    elses shoes before they be callling the police.
+  - We were just drinking some nice tea a coiuple of hours ago... And I just f*****
+    moved here.  Cant get into any trouble.
+  typingSpeed: 0.1
 --- !u!1001 &234842248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7095,7 +7100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16039,7 +16044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1974170494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17686,7 +17691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
