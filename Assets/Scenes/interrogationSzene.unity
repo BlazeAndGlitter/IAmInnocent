@@ -1593,13 +1593,23 @@ MonoBehaviour:
   messages:
   - Authorities arrived through some neighbours who called the police and arrested
     you at the crime szene.
-  - 'Interrogator: So, do you know why we arrested you? Were you the killer or the
-    weird clown uncle?'
-  choice1Result: 'Interrogator: YOU GO TO PRISONNN'
-  choice1ExtraMessages: []
-  choice2Result: Ok got it bro, we found the corpse on ballons and the knife in his
-    shoes so we believe you. Have a nice day :-)
-  choice2ExtraMessages: []
+  - Hello, my name is Detective Hugh Dunnit. I am investigating the murder on Muss
+    Edna Blackwood. So, tell me...
+  - How did you find the neighbor?
+  - Was there anyone who had probkems with her?
+  - We found a knife inside a clown shoe. Any Idea why?
+  - I cant keep an innocent man in here any longer... feel free to go.
+  - You are hiding something arent you?
+  - Looks like the clown was you. GO ... TO ... PRISON!
+  buttonTextba:
+  - I just saw some baloons floating oputside. She was just.. gone with the birds
+  - Her uncle. I think he is a creep. He came dressed as a clown
+  - Maybe someone wanted to scare her - or worse?
+  buttonTextbb:
+  - I just woke up - she way lying there ... DEAD. I was confused. Did she do crack
+    or something?
+  - Not that I Know of. I barely knew her, but she was very kind
+  - No Idea. That's npt my shoe
   currentMessageIndex: 0
 --- !u!1 &1227688145
 GameObject:
@@ -2463,9 +2473,14 @@ MonoBehaviour:
   holdParent: {fileID: 1400058181}
   holdSmoothness: 10
   interactionRange: 1.5
+  Messer: {fileID: 0}
   interactionHintUI: {fileID: 0}
   knifeDroppedOnShoe: 0
   corpseLaunched: 0
+  heldObject: {fileID: 0}
+  KnifeOnShoe: 0
+  wasKnife: 0
+  isShoe: 0
 --- !u!114 &1647562446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2523,7 +2538,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactDistance: 5
-  targetTag: Disappearable
+  bloodTag: Disappearable
+  broomTag: Broom
+  infoText: {fileID: 0}
+  messageDuration: 2
 --- !u!1 &1663778543
 GameObject:
   m_ObjectHideFlags: 0
