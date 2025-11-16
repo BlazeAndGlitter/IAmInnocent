@@ -3539,6 +3539,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7c69e40725f2d1a4687ecf3e80b2dfac, type: 3}
   m_PrefabInstance: {fileID: 419913045}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &269625248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fec625ccdcdedcd46a80e2cd97685505, type: 3}
+  m_PrefabInstance: {fileID: 1049109567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &269625252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269625248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cad365bab120d84587bb35005c4a27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Call police?
+--- !u!114 &269625253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269625248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3306ceb04ce154eb3bd1961fe05eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &269625254
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269625248}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.03, y: 0.03, z: 0.03}
+  m_Center: {x: 0.0002724199, y: 0.0015529847, z: 0.002502365}
 --- !u!1001 &271508599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4943,6 +4994,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1847353636}
+    - targetCorrespondingSourceObject: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1847353643}
     - targetCorrespondingSourceObject: {fileID: 1593727746557118, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 975465536}
@@ -6899,7 +6953,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cad365bab120d84587bb35005c4a27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: It says "Bloodsucker 9000"
+  message: 'A Broom
+
+'
 --- !u!4 &487602418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3cc09ca515fcbf145bc30a35152738cb, type: 3}
@@ -13681,6 +13737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: telefon
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fec625ccdcdedcd46a80e2cd97685505, type: 3}
+      propertyPath: m_TagString
+      value: Telefone
+      objectReference: {fileID: 0}
     - target: {fileID: 8766260383923175688, guid: fec625ccdcdedcd46a80e2cd97685505, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -13688,7 +13748,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fec625ccdcdedcd46a80e2cd97685505, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 269625252}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fec625ccdcdedcd46a80e2cd97685505, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 269625253}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fec625ccdcdedcd46a80e2cd97685505, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 269625254}
   m_SourcePrefab: {fileID: 100100000, guid: fec625ccdcdedcd46a80e2cd97685505, type: 3}
 --- !u!1001 &1055473904
 PrefabInstance:
@@ -21493,10 +21562,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactDistance: 5
   bloodTag: Disappearable
-  broomTag: Bloodsucker
+  bloodsuckerTag: Bloodsucker
   infoText: {fileID: 1383407462}
   messageDuration: 2
-  hasBroom: 0
+  hasBloodsucker: 0
 --- !u!114 &1847353622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21559,6 +21628,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &1847353643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847353614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1208da8894afee049ba41c9b1a060823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDistance: 5
+  infoText: {fileID: 0}
+  messageDuration: 2
 --- !u!1 &1852887167
 GameObject:
   m_ObjectHideFlags: 0
