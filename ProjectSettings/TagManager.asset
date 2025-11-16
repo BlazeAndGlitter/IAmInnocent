@@ -9,6 +9,8 @@ TagManager:
   - Footprint
   - Broom
   - Shoe
+  - Telefon
+  - Bloodsucker
   layers:
   - Default
   - TransparentFX

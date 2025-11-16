@@ -21,7 +21,7 @@ public class CountdownTimer : MonoBehaviour
     {
         if (!timerFinished)
         {
-            print("test");
+           // print("test");
             if (remainingTime > 0)
             {
                 remainingTime -= Time.deltaTime;

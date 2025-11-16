@@ -1,16 +1,18 @@
 using UnityEngine;
 using TMPro; // WICHTIG für TextMeshPro
+using UnityEngine.SceneManagement;
 
 public class BloodCleaner : MonoBehaviour
 {
     public float interactDistance = 5f;
     public string bloodTag = "Disappearable";
-    public string broomTag = "Broom";
+    public string bloodsuckerTag = "Bloodsucker";
+    public string telefonTag = "Telefon";
 
     public TextMeshProUGUI infoText;   // TMP Textfeld
     public float messageDuration = 2f; // Dauer der Anzeige
 
-    private bool hasBroom = false;
+    private bool hasBloodsucker = false;
     private float messageTimer = 0f;
 
     void Update()
@@ -23,11 +25,15 @@ public class BloodCleaner : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, interactDistance))
             {
-                if (hit.collider.CompareTag(broomTag))
+                if (hit.collider.CompareTag(bloodsuckerTag))
                 {
-                    hasBroom = true;
+                    hasBloodsucker = true;
                     Destroy(hit.collider.gameObject);
                     ShowMessage("I picked up the vacuum cleaner.");
+                }
+                if (hit.collider.CompareTag(telefonTag))
+                {
+                    SceneManager.LoadScene("interrogationSzene");
                 }
             }
         }
@@ -35,7 +41,7 @@ public class BloodCleaner : MonoBehaviour
         // Blut aufwischen
         if (Input.GetKeyDown(KeyCode.C))
         {
-            if (!hasBroom)
+            if (!hasBloodsucker)
             {
                 ShowMessage("I need to find a cleaning device first to clean this.");
                 return;
